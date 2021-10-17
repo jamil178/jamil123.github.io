@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- ... -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="tailwind.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/d8a7feb48d.js" crossorigin="anonymous"></script>
+  <title>Profile | Muhamad Jamil Zainu Noor</title>
+</head>
+<body>
+  <!-- ... -->
+  <div id="app" class="w-full h-full bg-gray-100 py-6 lg:static">
+
+
+  	<!-- Card -->
+  	<div class="w-5/6 h-full bg-white rounded-xl shadow-lg mx-auto lg:flex lg:justify-center lg:items-center lg:mt-12 xl:w-4/6">
+  		<!-- Part Left -->
+  		<div class="w-full h-full py-12 lg:w-2/6">
+  			<img class="w-33 h-32 rounded-full mx-auto" src="src/img/jamil.jpg">
+  			<p class="font-bold text-gray-900 text-center mt-4 mb-2">Muhamad Jamil Zainu Noor</p>
+  			<p class="text-center text-gray-700">IT Staff</p>
+  			<p class="text-center text-gray-500">"Tetaplah Berikhtiar Walaupun Susah"</p>
+  			<div class="mx-6 flex justify-around mt-6">
+				<a href="https://api.whatsapp.com/send?phone=6289627986308" target="_blank">
+					<p class="text-gray-700 font-semibold">Whatsapp</p>
+					<i class="fab fa-whatsapp fa-2x text-gray-700 ml-5 mt-2"></i>
+				</a>
+				<a href="https://www.instagram.com/muhamad_jamil178/" target="_blank">
+					<p class="text-gray-700 font-semibold">Instagram</p>
+					<i class="fab fa-instagram fa-2x text-gray-700 ml-5 mt-2"></i>
+				</a><!-- 
+				<a href="https://twitter.com/jamil" target="_blank">
+					<p class="text-gray-700 font-semibold">Twitter</p>
+					<i class="fab fa-twitter fa-2x text-gray-700 ml-2 mt-2"></i>
+				</a> -->
+  			</div>
+  		</div>
+  		<!-- Part Right -->
+  		<div class="w-full h-full lg:w-4/6 lg:-mt-6">
+  			<!-- Menu -->
+  			<div class="w-full flex space-x-2 justify-between mt-6" v-bind:class="{ 'mt-2': !toggle}">
+  				<div class="w-1/2 py-2 border-b-2 cursor-pointer " v-bind:class="{ 'border-indigo-400': toggle}" @click="toggle = true">
+  					<p class="text-center text-gray-700">Keterampilan</p>
+  				</div>
+  				<div class="w-1/2 py-2 border-b-2 cursor-pointer " v-bind:class="{ 'border-indigo-400': !toggle}" @click="toggle = false">
+  					<p class="text-center text-gray-700">Portofolio</p>
+  				</div>
+  			</div>
+  			<!-- Keterampilan -->
+	        <div v-show="toggle === true">
+	          <div class="grid grid-cols-4 space-y-10 -ml-2 px-2 pb-4 lg:-ml-6">
+	            <div class="text-center mt-10">
+	              <img class="w-14 h-14 mx-auto rounded-full" src="src/img/html.png">
+	              <p class="text-center text-gray-700 text-sm font-semibold">HTML</p>
+	            </div>
+	            <div class="text-center">
+	              <img class="w-14 h-14 mx-auto rounded-full" src="src/img/css.png">
+	              <p class="text-gray-700 font-semibold text-sm">CSS</p>
+	            </div>
+	            <div class="text-center">
+	              <img class="w-14 h-14 mx-auto rounded-full" src="src/img/mikrotik.png">
+	              <p class="text-gray-700 font-semibold text-sm">Mikrotik</p>
+	            </div>
+	            <div class="text-center">
+	              <img class="w-14 h-14 mx-auto rounded-full" src="src/img/bootstrap.png">
+	              <p class="text-gray-700 font-semibold text-sm">Bootstrap</p>
+	            </div>
+	            <div class="text-center">
+	              <img class="w-14 h-14 mx-auto rounded-full" src="src/img/acunetix.png">
+	              <p class="text-gray-700 font-semibold text-sm">Acunetix</p>
+	            </div>
+	            <div class="text-center">
+	              <img class="w-auto h-auto mx-auto rounded-full" src="src/img/cisco.png">
+	              <p class="text-gray-700 font-semibold text-sm">Cisco</p>
+	            </div>
+	            <div class="text-center">
+	              <img class="w-14 h-14 mx-auto rounded-full" src="src/img/subneting.png">
+	              <p class="text-gray-700 font-semibold text-sm">Subneting</p>
+	            </div>
+	            <div class="text-center">
+	              <img class="w-14 h-14 mx-auto rounded-full" src="src/img/php.png">
+	              <p class="text-gray-700 font-semibold text-sm">PHP</p>
+	            </div>
+	            <div class="text-center">
+	              <img class="w-14 h-14 mx-auto rounded-full" src="src/img/mysql.png">
+	              <p class="text-gray-700 font-semibold text-sm">MySql</p>
+	            </div>
+	            <div class="text-center">
+	              <img class="w-auto h-14 mx-auto rounded-full" src="src/img/maintenance.png">
+	              <p class="text-gray-700 font-semibold text-sm">Maintenance</p>
+	            </div>
+	            <div class="text-center">
+	              <img class="w-auto h-14 mx-auto rounded-full" src="src/img/c.png">
+	              <p class="text-gray-700 font-semibold text-sm">C#</p>
+	            </div>
+	          </div>
+       </div>
+	        <!-- Portofolio -->
+	        <div v-if="toggle === false" class="w-full space-y-4 h-full pr-2 pt-4 sm:py-10 sm:space-y-10 lg:py-4 lg:space-y-2">
+	        	<!-- Per project -->
+  				<div class="w-full sm:flex sm:space-x-4 sm:mx-auto sm:justify-center lg:justify-start">
+  					<img @click="toggleDetail = true" class="w-56 border border-gray-200 mx-auto rounded-tl-3xl rounded-br-3xl hover:border-indigo-200 cursor-pointer sm:mx-0" src="src/img/porto1.png">
+  					<div class="h-24 overflow-hidden text-center"> 
+	  					<p class="text-gray-800 font-semibold text-sm mt-1 sm:text-left cursor-pointer md:text-base" @click="toggleDetail = true">Rancangan Cisco SMK Itikurih Hibarna</p>
+	  					<p class="text-gray-500 mt-1 text-xs sm:text-left md:text-sm">Dibuat pada ‎06 ‎Maret ‎2016</p>
+	  					<div class="text-gray-700 flex space-x-2 mt-2 font-semibold justify-center sm:justify-start md:text-base">
+			                <p class="text-gray-400 text-xs lg:text-sm">Cisco </p>    
+		              	</div>
+  					</div>
+  				</div>
+  				<div class="w-full sm:flex sm:space-x-4 sm:mx-auto sm:justify-center lg:justify-start">
+  					<img @click="toggleDetail = true" class="w-56 border border-gray-200 mx-auto rounded-tl-3xl rounded-br-3xl hover:border-indigo-200 cursor-pointer sm:mx-0" src="src/img/porto2.jpeg">
+  					<div class="h-24 overflow-hidden text-center">
+	  					<p class="text-gray-800 font-semibold text-sm mt-1 sm:text-left cursor-pointer md:text-base" @click="toggleDetail = true">Game Visual Novel</p>
+	  					<p class="text-gray-500 mt-1 text-xs sm:text-left md:text-sm">Dibuat pada 08 Agustus 2020</p>
+	  					<div class="text-gray-700 flex space-x-2 mt-2 font-semibold justify-center sm:justify-start md:text-base">
+			                <p class="text-gray-400 text-xs lg:text-sm">Bahasa Pemograman C#</p>
+		              	</div>
+  					</div>
+  				</div>
+	        </div>
+
+  		</div>
+  	</div>
+  </div>
+
+
+  <!-- Detail Portofolio -->
+    <div v-if="toggleDetail === true" class="h-screen w-screen fixed flex justify-center items-center" @click="toggleDetail = false">
+      <div class="h-40 w-56 bg-white fixed flex justify-center items-center shadow-lg border border-gray-100">
+        <p class="text-gray-700 font-semibold">Coming Soon...</p>
+      </div>
+    </div>
+
+    <!-- Loader -->
+    <div v-if="loader === true" class="w-screen h-screen bg-gray-100 fixed flex justify-center items-center">
+      <img class="w-16 h-16" src="src/img/eclipse.gif">
+    </div>
+  </div>
+
+
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
